@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-if="museums.length">
-    <Header/>
+    <Header />
     <Map :datamuseums="museums" v-if="museums.length > 0"></Map>
     <Footer></Footer>
   </div>
@@ -22,7 +22,8 @@ let config = {
   databaseURL: process.env.VUE_APP_DATABASE_URL,
   projectId: process.env.VUE_APP_PROJECT_ID,
   storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID
+  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID,
+  mapboxToken: process.env.VUE_APP_MAPBOX_TOKEN,
 };
 
 let app = Firebase.initializeApp(config);
@@ -34,14 +35,14 @@ export default {
   components: {
     Header,
     Footer,
-    Map
+    Map,
   },
   firebase: {
-    museums: museumsRef
+    museums: museumsRef,
   },
-  data: function() {
+  data: function () {
     return {};
-  }
+  },
 };
 </script>
 

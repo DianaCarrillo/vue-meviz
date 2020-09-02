@@ -9,11 +9,8 @@
     "now-build": "npm run build"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
     "firebase": "^5.8.0",
-    "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
-    "popper.js": "^1.14.6",
     "vue": "^2.5.21",
     "vue2-leaflet": "^1.2.3",
     "vuefire": "^1.4.5"
